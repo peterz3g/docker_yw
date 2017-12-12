@@ -28,8 +28,8 @@ pip install -r /code/requirements.txt && \
 apt-get clean && \
 apt-get autoclean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-
 ls
+
 
 EXPOSE 8000
 ENTRYPOINT ["/bin/bash", "/code/entrypoint.sh"]
