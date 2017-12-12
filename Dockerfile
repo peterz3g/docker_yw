@@ -7,6 +7,9 @@ WORKDIR /code
 COPY . /code/
 ADD cron_jobs.txt /var/spool/cron/crontabs/root
 
+
+# install nginx  E: dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem. 
+
 RUN apt-get update && \
 apt-get -y upgrade gcc && \
 apt-get install -y cron && \
@@ -14,10 +17,13 @@ apt-get install -y default-jre && \
 apt-get install -y vim && \
 apt-get install -y libxml2-dev libxslt-dev python-dev && \
 apt-get install -y python3-dev python-lxml  && \
+apt-get install -y apt-utils && \
+apt-get install -y supervisor && \
 touch /code/jobs.log && \
 chmod +x /code/entrypoint.sh && \
 chmod 0600 /var/spool/cron/crontabs/root && \
 pip install --upgrade pip && \
+pip install --upgrade setuptools && \
 pip install -r /code/requirements.txt && \
 apt-get clean && \
 apt-get autoclean && \
