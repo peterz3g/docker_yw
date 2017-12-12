@@ -9,6 +9,7 @@ ADD cron_jobs.txt /var/spool/cron/crontabs/root
 
 
 # install nginx  E: dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem. 
+# pip install --no-cache-dir -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
 RUN apt-get update && \
 apt-get -y upgrade gcc && \
