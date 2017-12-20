@@ -6,9 +6,9 @@ cat /code/project_env.sh
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 service cron restart
 
-alien -i oracle-instantclient11.2-basic-11.2.0.4.0-1.x86_64.rpm
-alien -i oracle-instantclient11.2-devel-11.2.0.4.0-1.x86_64.rpm
-alien -i oracle-instantclient11.2-sqlplus-11.2.0.4.0-1.x86_64.rpm
+alien -i ./ora11_python/oracle-instantclient11.2-basic-11.2.0.4.0-1.x86_64.rpm
+alien -i ./ora11_python/oracle-instantclient11.2-devel-11.2.0.4.0-1.x86_64.rpm
+alien -i ./ora11_python/oracle-instantclient11.2-sqlplus-11.2.0.4.0-1.x86_64.rpm
 
 echo "#add by zhangyang32"  >> /etc/profile
 echo "export ORACLE_BASE=/usr/lib/oracle/11.2"  >> /etc/profile
